@@ -6,13 +6,13 @@ st.set_page_config(page_title="SMS Spam Classifier")
 st.title("SMS Spam Classifier Demo")
 
 # Load trained model
-model = joblib.load('models/spam_classifier.joblib')
+model = joblib.load('models/spam_classifier.joblib') # Ensure the model is in the 'models' directory
 
 # Text input for user
 msg = st.text_area("Enter your SMS message here:", height=150)
 
 # Prediction button
-if st.button("Predict"):
+if st.button("Predict"): 
     if not msg.strip():
         st.warning("Please enter a message.")
     else:
